@@ -1,0 +1,10 @@
+<div class="ng-date-items">
+    <div class="form-group" daterangepicker [options]="options" (selected)="selected($event)" >
+        <label for="dateform">
+            <i class="far fa-calendar-alt fa-w-6"></i>
+        </label>
+        <input type="text" name="date" [(ngModel)]="date" placeholder="{{placeholder}}"  readonly />
+    </div>
+</div>
+
+

@@ -1,0 +1,13 @@
+<ng-select class="custom-options"
+[items]="states"
+bindLabel="name"
+bindValue="id"
+placeholder="Select State"
+[(ngModel)]="selectedState"
+(change)="optionSelected()"
+>
+  <!-- <ng-template ng-option-tmp let-item="item" > 
+      {{item.id}} - {{item.name}}
+  </ng-template> -->
+</ng-select>
+<br/>

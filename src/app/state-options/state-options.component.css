@@ -1,0 +1,5 @@
+
+:host ::ng-deep .custom-options .ng-option {
+    float: left;
+    width: 50%;
+}

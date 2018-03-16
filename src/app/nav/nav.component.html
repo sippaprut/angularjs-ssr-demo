@@ -1,0 +1,24 @@
+<nav>
+  <a routerLink="/dashboard">Dashboard</a>
+  <a routerLink="/heroes">Heroes</a>
+</nav>
+<br/>
+<app-state-options (onSelected)="selected($event)" ></app-state-options>
+{{ selectedState }} <br/>
+
+{{ date | json }}
+<app-filter-date (onSelected)="selectedDate($event)" [placeholder]="'Select a date'"></app-filter-date>
+<!-- 
+<p>
+  <button type="button" class="btn btn-outline-primary" (click)="collapsed()"
+          [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
+    Toggle
+  </button>
+</p>
+<div id="collapseExample" *ngIf="isCollapsed">
+  <div class="card">
+    <div class="card-body">
+      You can collapse this card by clicking Toggle
+    </div>
+  </div>
+</div> -->

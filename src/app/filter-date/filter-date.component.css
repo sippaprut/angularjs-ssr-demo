@@ -1,0 +1,157 @@
+:host ::ng-deep .custom-dropdown .ng-option {
+    float: left;
+    width: 50%;
+}
+
+:host ::ng-deep .custom-dropdown .ng-control {
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    color: #333;
+    cursor: default;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-spacing: 0;
+    border-collapse: separate;
+    min-height: 36px;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+:host ::ng-deep .custom-dropdown .ng-control .ng-value-container {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-left: 10px;
+}
+
+:host ::ng-deep .custom-dropdown .ng-arrow-zone {
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+    width: 25px;
+    padding-right: 5px;
+    position: absolute;
+    right: 0;
+}
+
+:host ::ng-deep .custom-dropdown .ng-arrow-zone .ng-arrow {
+    border-color: #999 transparent transparent;
+    border-style: solid;
+    border-width: 5px 5px 2.5px;
+    display: inline-block;
+    height: 0;
+    width: 0;
+}
+
+:host ::ng-deep .custom-dropdown .ng-control .ng-value-container .ng-input {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top:3px;
+    padding-left: 10px;
+    padding-right: 50px;
+}
+
+:host ::ng-deep .custom-dropdown .ng-input-value{
+    display: block;
+}
+
+:host ::ng-deep .show .ng-value-container .ng-input-value {
+    display: none;
+} 
+
+:host ::ng-deep .custom-dropdown .ng-input-search {
+    display: none;
+}
+
+:host ::ng-deep .show .ng-value-container .ng-input-search {
+    display: block;
+}
+
+:host ::ng-deep .custom-dropdown .ng-control .ng-value-container input {
+    min-width: 5px;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    background: none transparent;
+    border: 0 none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: none;
+    cursor: default;
+    width: 100%;
+}
+
+
+:host ::ng-deep .custom-dropdown .ng-dropdown-menu {
+    display: none;
+}
+
+:host ::ng-deep .show > .ng-dropdown-menu {
+    display: block;
+}
+
+:host ::ng-deep .custom-dropdown .ng-dropdown-menu {
+    top: 100%;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-top-color: #e6e6e6;
+    margin-top: -1px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+    -webkit-overflow-scrolling: touch;
+}
+
+:host ::ng-deep .custom-dropdown .ng-dropdown-menu  .ng-select-dropdown {
+    display: block;
+    height: auto;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    max-height: 240px;
+    margin-bottom: 1px;
+    overflow-y: auto;
+}
+
+:host ::ng-deep .custom-dropdown .ng-dropdown-menu  .ng-select-dropdown .ng-options {
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #666666;
+    cursor: pointer;
+    display: block;
+    padding: 8px 10px;
+    float: left;
+    width: 50%;
+}
+
+:host ::ng-deep .custom-dropdown .ng-dropdown-menu  .ng-select-dropdown .ng-options:hover,
+:host ::ng-deep .custom-dropdown .ng-dropdown-menu  .ng-select-dropdown .ng-options.active
+{
+    text-decoration: underline;
+    background-color: #ebf5ff;
+    color: #333;
+}
+
+
+

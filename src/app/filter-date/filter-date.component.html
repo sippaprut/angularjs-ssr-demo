@@ -1,0 +1,74 @@
+
+<div class="dropdown custom-dropdown" [class.show]="isShowDropdown === true" >
+    <div class="ng-control" (click)="toggleDropdown($event)">
+        <div id="dropdownMenuLink" class="ng-value-container" >
+            <div class="ng-input" >
+                <div class="ng-input-value">{{ showLabelOption() || placeholder  }}</div>
+                
+                <input class="ng-input-search" #inputSearch type="text"  value="" 
+                (keyup)="searchItem($event.target.value)"  >
+            </div>
+            <span class="ng-arrow-zone">
+                <span class="ng-arrow"></span>
+            </span>
+        </div><!--End dropdownMenuLink-->
+    </div><!--End ng-control-->
+
+
+    <div class="ng-dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <div class="ng-select-dropdown">
+            <div class="ng-options" *ngFor="let item of dateOptions" (click)="selectOption(item)" [class.active]="selectedDate.name === item.name">
+                <span class="ng-option-label">{{ item.name }}</span>
+            </div>
+        </div><!-- End ng-select-dropdown-->
+
+        
+
+        <div class="ng-select-daterage" *ngIf="isCustomDate()">
+            <app-date-select *ngIf="selectedDate.hasDateFrom"
+            (onSelected)="afterSelectedFromCustomDate($event)" 
+            [placeholder]="'Date From'" 
+            [date]="selectedDate.start"
+            [options]="dateFromOptions"
+            >
+            </app-date-select>
+
+            <app-date-select *ngIf="selectedDate.hasDateTo"
+            (onSelected)="afterSelectedToCustomDate($event)" 
+            [placeholder]="'Date To'" 
+            [date]="selectedDate.end"
+            [options]="dateToOptions"
+              ></app-date-select>
+        </div>
+
+        <!-- <div class="ng-select-daterage" *ngIf="selectedDate.hasDateFrom && selectedDate.hasDateTo === false">
+            <app-date-select 
+            (onSelected)="afterSelectedFromCustomDate($event)" 
+            [placeholder]="'Date From'" 
+            [date]="selectedDate.start"
+            [options]="dateFromOptions"
+            >
+            </app-date-select>
+        </div>
+
+        <div class="ng-select-daterage" *ngIf="selectedDate.hasDateTo">
+            <app-date-select 
+            (onSelected)="afterSelectedFromCustomDate($event)" 
+            [placeholder]="'Date From'" 
+            [date]="selectedDate.start"
+            [options]="dateFromOptions"
+            >
+            </app-date-select>
+
+            <app-date-select 
+            (onSelected)="afterSelectedToCustomDate($event)" 
+            [placeholder]="'Date To'" 
+            [date]="selectedDate.end"
+            [options]="dateToOptions"
+                ></app-date-select>
+        </div> -->
+
+        
+    </div><!-- End dropdown-menu-->
+</div><!--End custom-dropdown-->
+ 
